@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         body{
+            background-color: rgb(24, 88, 67) !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         #wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+         }
+         #button{
+            position: relative;
+            height: 60px;
+            width: 130px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: all ease-in-out 0.5s;
+
+         }
+        span{
+            position: absolute;
+            z-index: 3;
+            right: 0px;
+            width: 130px;
+            transition: all ease-in-out 0.5s;
+            font-size: 18px;
+            text-align: center;
+
+        }
+         #button::before{
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 60px;
+            width: 0px;
+            border-radius: 10px;
+            transition: all ease-in-out 0.5s;
+
+         }
+         #button::after{
+            content:"Tìm hiểu thêm";
+            color: rgb(24, 88, 67);
+            z-index: 3;
+            position: absolute;
+            right: -120px;
+            font-size: 18px;
+            transition: all ease-in-out 0.5s;
+         }
+         #button:hover::before{
+            width: 130px;
+            background-color: aqua;
+         }
+         #button:hover::after{
+            right: 13px;
+            color: red;
+         }
+         #button:hover span{
+              right: 200px;
+              color:  rgb(24, 88, 67);
+         }
+
+    </style>
+    <div id="wrapper">
+        <div id="button">
+            <span>Tìm hiểu thêm</span>
+        </div>
+    </div>
+</body>
+</html>
